@@ -19,21 +19,24 @@
 #define S_SHORT 1
 
 /**
-  *struct fmt - Struct op
-  *@fmt: The format
-  *@fn: The function associated
-  */
+ * struct fmt - Struct op
+ *
+ * @fmt: The format.
+ * @fn: The function associated.
+ */
 struct fmt
 {
 	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
-}
+};
+
 
 /**
-  *typedef struct fmt fmt_t - Struct op
-  *@fmt: The format
-  *@fm_t: The function associated
-  */
+ * typedef struct fmt fmt_t - Struct op
+ *
+ * @fmt: The format.
+ * @fm_t: The function associated.
+ */
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
@@ -102,7 +105,6 @@ int write_pointer(char buffer[], int ind, int length,
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
-
 
 /****************** UTILS ******************/
 int is_printable(char);
